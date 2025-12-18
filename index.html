@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>EcoClassify AI Hub</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+:root{
+    --biru:#0d6efd;
+    --biru-muda:#eef4ff;
+}
+
+body{
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
+    background:var(--biru-muda);
+}
+
+/* ===== LOGIN ===== */
+#loginPage{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#0d6efd,#6ea8fe);
+}
+
+.login-box{
+    background:white;
+    width:350px;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 20px 40px rgba(0,0,0,0.25);
+}
+
+.login-box h2{
+    text-align:center;
+    color:var(--biru);
+}
+
+.login-box input{
+    width:100%;
+    padding:10px;
+    margin:10px 0;
+    border-radius:6px;
+    border:1px solid #ccc;
+}
+
+.login-box button{
+    width:100%;
+    padding:10px;
+    background:var(--biru);
+    color:white;
+    border:none;
+    border-radius:6px;
+    font-size:16px;
+    cursor:pointer;
+}
+
+/* ===== NAVBAR ===== */
+#contentPage{
+    display:none;
+}
+
+.navbar{
+    background:var(--biru);
+    color:white;
+    padding:15px 25px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.navbar h1{
+    margin:0;
+    font-size:22px;
+}
+
+.navbar .menu a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+    font-weight:bold;
+}
+
+.navbar .menu a:hover{
+    text-decoration:underline;
+}
+
+/* ===== CONTENT ===== */
+.container{
+    max-width:1100px;
+    margin:auto;
+    padding:25px;
+}
+
+.section{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    margin-bottom:30px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.1);
+}
+
+.section h2{
+    color:var(--biru);
+}
+
+.section img{
+    width:100%;
+    max-width:500px;
+    display:block;
+    margin:20px auto;
+    border-radius:12px;
+}
+
+.section p{
+    text-align:justify;
+    line-height:1.7;
+}
+
+ul{
+    padding-left:20px;
+}
+
+footer{
+    background:var(--biru);
+    color:white;
+    text-align:center;
+    padding:15px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- ===== LOGIN PAGE ===== -->
+<div id="loginPage">
+    <div class="login-box">
+        <h2>Login EcoClassify AI</h2>
+        <input type="text" placeholder="Username (bebas)">
+        <input type="password" id="password" placeholder="Password">
+        <button onclick="login()">Masuk</button>
+    </div>
+</div>
+
+<!-- ===== CONTENT PAGE ===== -->
+<div id="contentPage">
+
+<div class="navbar">
+    <h1>EcoClassify AI Hub</h1>
+    <div class="menu">
+        <a href="#beranda">Beranda Utama</a>
+        <a href="#" onclick="logout()">Log Out</a>
+    </div>
+</div>
+
+<div class="container" id="beranda">
+
+<div class="section">
+<h2>Pengertian Klasifikasi Lingkungan Berbasis AI</h2>
+<p>
+Klasifikasi lingkungan berbasis AI merupakan penerapan teknologi kecerdasan buatan
+untuk mengelompokkan kondisi lingkungan berdasarkan data tertentu seperti gambar,
+kualitas udara, tingkat pencemaran, dan keberadaan sampah. Sistem ini membantu manusia
+memahami kondisi lingkungan secara objektif dan cepat. Dalam konteks edukasi sosial,
+teknologi ini berperan sebagai media pembelajaran yang efektif untuk meningkatkan
+kesadaran masyarakat terhadap pentingnya menjaga lingkungan.
+</p>
+<img src="https://images.unsplash.com/photo-1581092334651-ddf26d9e6a38" alt="AI dan Lingkungan">
+</div>
+
+<div class="section">
+<h2>Cara Kerja Sistem AI</h2>
+<p>
+Proses klasifikasi lingkungan dimulai dari pengumpulan data. Data tersebut dapat berupa
+gambar lingkungan, sensor kualitas udara, data suhu, serta informasi tingkat pencemaran.
+Selanjutnya, AI akan menganalisis data menggunakan algoritma pembelajaran mesin
+(machine learning). Hasil analisis tersebut kemudian diklasifikasikan ke dalam kategori
+tertentu seperti lingkungan bersih, sedang, atau tercemar. Informasi ini dapat digunakan
+sebagai bahan edukasi sosial untuk mendorong perubahan perilaku masyarakat.
+</p>
+<img src="https://images.unsplash.com/photo-1534751516642-a1af1ef26a56" alt="Proses AI">
+</div>
+
+<div class="section">
+<h2>Ciri-ciri Klasifikasi Lingkungan Berbasis AI</h2>
+<ul>
+<li>Menggunakan kecerdasan buatan sebagai inti analisis data</li>
+<li>Berbasis data visual dan sensor lingkungan</li>
+<li>Menyediakan hasil klasifikasi secara cepat dan akurat</li>
+<li>Mendukung program edukasi sosial masyarakat</li>
+<li>Membantu pengambilan keputusan terkait lingkungan</li>
+</ul>
+<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee" alt="Lingkungan Bersih">
+</div>
+
+<div class="section">
+<h2>Kesimpulan</h2>
+<p>
+Klasifikasi lingkungan berbasis AI merupakan inovasi penting dalam upaya pelestarian alam.
+Dengan menggabungkan teknologi modern dan edukasi sosial, masyarakat dapat memahami
+kondisi lingkungan secara lebih mendalam. EcoClassify AI Hub hadir sebagai sarana edukasi
+yang mendorong kesadaran kolektif untuk menjaga lingkungan demi masa depan yang sehat,
+bersih, dan berkelanjutan.
+</p>
+<img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e" alt="Pelestarian Alam">
+</div>
+
+</div>
+
+<footer>
+© 2025 EcoClassify AI Hub
+</footer>
+
+</div>
+
+<script>
+function login(){
+    var pw = document.getElementById("password").value;
+    if(pw === "12345"){
+        document.getElementById("loginPage").style.display="none";
+        document.getElementById("contentPage").style.display="block";
+    }else{
+        alert("Password salah!");
+    }
+}
+
+function logout(){
+    document.getElementById("contentPage").style.display="none";
+    document.getElementById("loginPage").style.display="flex";
+    document.getElementById("password").value="";
+}
+</script>
+
+</body>
+</html>
